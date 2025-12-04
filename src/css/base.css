@@ -1,10 +1,111 @@
+/* ----------------- */
 /* Custom Properties */
+/* ----------------- */
+:root {
+    --clr-neutral-900: 233 18% 9%;
+    --clr-neutral-800: 235 14% 15%;
+    --clr-neutral-700: 235 13% 19%;
+    --clr-neutral-600: 234 14% 29%;
+    --clr-neutral-200: 240 26% 92%;
+    --clr-neutral-100: 240 24% 96%;
+    --clr-neutral-0: 0 0% 100%;
 
-/* General Resets */
+    --clr-blue-400: 274 90% 80%;
+    --clr-blue-500: 274 90% 73%;
 
-/* Body */
-body {
-    background-color: brown;
-    color: antiquewhite;
+    --clr-yellow-500: 37 100% 50%;
+
+    --clr-orange-500: 15 99% 67%;
+    --clr-orange-800: 15 99% 43%;
+
+    --fs-1: 4rem;
+    --fs-mobile-1: 2.5rem;
+    --fs-2: 1.5rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1rem;
 }
+
+/* -------------- */
+/* General Resets */
+/* -------------- */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+}
+
+/* 4. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 5. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 6. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 7. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* ------------------ */
+/* -- Base Styling -- */
+/* ------------------ */
+
+body {
+    background-color: hsl(var(--clr-neutral-900));
+    color: hsl(var(--clr-neutral-0));
+    font-family: "DM Sans", sans-serif;
+}
+
+#root {
+    /* Layout */
+    display: grid;
+    grid-template-columns: 1fr min(61rem, 100%) 1fr;
+    padding-inline: 16px;
+}
+
+#root > * {
+    grid-column: 2;
+}
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+  
+
 /* Utilities */
+
+.fs-1 { font-size: var(--fs-1); }
+.fs-m-1 { font-size: var(--fs-mobile-1); }
+.fs-2 { font-size: var(--fs-2); }
+.fs-3 { font-size: var(--fs-3); }
+.fs-4 { font-size: var(--fs-4); }
