@@ -1,1 +1,7 @@
 /* Component-specific styles */
+
+
+#characterLimit {
+    width: 3.45rem;
+    height: 1.8rem;
+}

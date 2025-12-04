@@ -22,7 +22,7 @@ export function getSentenceCount(text) {
     return finalText.length
 }
 
-// Create a character freq count for letter density graph
+// Character freq count for letter density graph
 export function getLetterFreq(text) {
     const textArray = text.toUpperCase().split(" ").join("").split("")
 
