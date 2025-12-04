@@ -1,5 +1,8 @@
 import React from "react"
-import { getLetterFreq, getWordCount, getSentenceCount } from "../utils";
+import { getLetterFreq, 
+        getWordCount, 
+        getSentenceCount, 
+        getReadTime } from "../utils";
 
 export default function TextArea() {
 
@@ -9,7 +12,7 @@ export default function TextArea() {
     const [hasLimit, setHasLimit] = React.useState(false)
     const [limitValue, setLimitValue] = React.useState(null)
 
-    const readingTime = `0 minute`
+    const readingTime = getReadTime(text)
 
     // Count characters (with and without space)
     let textCount;

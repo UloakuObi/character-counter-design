@@ -45,3 +45,18 @@ export function getLetterFreq(text) {
     return sortedDesc
 
 }
+
+// Calculate Reading Time
+export function getReadTime(text) {
+    const averageWPM = 200
+    const wordCount = getWordCount(text)
+    const readTime = Math.ceil(wordCount / averageWPM)
+
+    if(readTime === 0) {
+        return `0 minute`
+    } else if (readTime <= 1) {
+        return `<${readTime} minute`
+    } else {
+        return `<${readTime} minutes`
+    }
+}
