@@ -1,5 +1,18 @@
 // Helper functions
 
+// Count Characters
+export function getCharacterCount(text, excludeSpaces) {
+     // Count characters (with and without space)
+     let textCount;
+
+     if (excludeSpaces) {
+         textCount = text.split(" ").join("").split("").length
+     } else {
+         textCount = text.split("").length
+     }
+
+     return textCount
+}
 
 // Count Words
 export function getWordCount(text) {

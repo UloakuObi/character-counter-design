@@ -76,6 +76,7 @@ body {
     background-color: hsl(var(--clr-neutral-900));
     color: hsl(var(--clr-neutral-0));
     font-family: "DM Sans", sans-serif;
+    font-size: var(--fs-4);
 }
 
 #root {
@@ -109,3 +110,5 @@ body {
 .fs-2 { font-size: var(--fs-2); }
 .fs-3 { font-size: var(--fs-3); }
 .fs-4 { font-size: var(--fs-4); }
+
+.red-highlight {color: hsl(var(--clr-orange-500));}

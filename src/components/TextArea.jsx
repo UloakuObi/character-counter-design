@@ -1,40 +1,20 @@
 import React from "react"
-import { getLetterFreq, 
-        getWordCount, 
-        getSentenceCount, 
-        getReadTime } from "../utils";
+import LimitReachedPopup from "./LimitReachedPopup";
+import { getReadTime, getCharacterCount } from "../utils";
 
-export default function TextArea() {
-
-    // Set text in state
-    const [text, setText] = React.useState("")
-    const [excludeSpaces, setExcludeSpaces] = React.useState(false)
+export default function TextArea({text, setText, excludeSpaces, setExcludeSpaces, textCount}) {
+    // Set state values
     const [hasLimit, setHasLimit] = React.useState(false)
     const [limitValue, setLimitValue] = React.useState(null)
 
-    const readingTime = getReadTime(text)
+    const readingTime = getReadTime(text)   
 
-    // Count characters (with and without space)
-    let textCount;
+    const limitReached = (Number(limitValue) != 0) && (Number(textCount) + 1 > Number(limitValue))
+    // console.log(Number(textCount))
+    // console.log(Number(limitValue))
+    // console.log(limitReached)
 
-    if (excludeSpaces) {
-        textCount = text.split(" ").join("").split("").length
-    } else {
-        textCount = text.split("").length
-    }
-    
     //console.log(`Text Count: ${textCount}`)
-
-    // Count words
-    const wordCount = getWordCount(text)
-    //console.log(`Word Count: ${wordCount}`)
-
-    // Count sentences
-    const sentenceCount = getSentenceCount(text)
-    //console.log(`Sentence Count: ${sentenceCount}`)
-
-    const letterDensity = getLetterFreq(text)
-    // console.log(letterDensity)
 
     function clearLimitValue() {
         if (!hasLimit) {
@@ -54,30 +34,38 @@ export default function TextArea() {
                     placeholder="Start typing here… (or paste your text)"
                     maxLength={limitValue}></textarea>
 
-            <div>
-                <div>
-                    <label>
-                        <input type="checkbox" name="excludeSpaces"
+            {limitReached &&  <LimitReachedPopup limitValue={limitValue}/>}
+
+            <div className="flex flex-col md:flex-row justify-between gap-2 mt-3">
+                <div className="flex flex-col md:flex-row gap-2 lg:gap-6">
+                    <label className="checkbox">
+                        <input className="checkbox" type="checkbox" name="excludeSpaces"
                             onChange={e => setExcludeSpaces(e.target.checked)} 
                         />
+                        <span className="custom"></span>
                         Exclude Spaces
                     </label>
 
-                    <label>
-                        <input type="checkbox" name="hasLimit"
-                            onChange={e => setHasLimit(e.target.checked)} 
-                        />
-                        Set Character Limit
-                    </label>
+                    <div className="flex content-center gap-3">
+                        <label className="checkbox">
+                            <input className="checkbox" type="checkbox" name="hasLimit"
+                                onChange={e => setHasLimit(e.target.checked)} 
+                            />
+                            <span className="custom"></span>
+                            Set Character Limit
+                        </label>
 
-                    <label htmlFor="characterLimit" className="sr-only">Enter Character Limit</label>
-                    {hasLimit && <input type="text" 
-                                        name="characteLimit" 
-                                        id="characterLimit" 
-                                        onChange={(e) => setLimitValue(e.target.value)}/>}
+                        <label htmlFor="characterLimit" className="sr-only">Enter Character Limit</label>
+                        {hasLimit && <input type="text" 
+                                            name="characteLimit" 
+                                            id="characterLimit" 
+                                            className="limitbox"
+                                            onChange={(e) => setLimitValue(e.target.value)}/>}
+                    </div>
                 </div>
                 <p>Approx. reading time: {readingTime}</p>
             </div>
+           
         </>
     )
 }
