@@ -38,6 +38,7 @@ export default function App() {
         textCount={textCount}
         wordCount={wordCount}
         sentenceCount={sentenceCount}
+        excludeSpaces={excludeSpaces}
       />
     </>
     )

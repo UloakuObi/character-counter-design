@@ -1,10 +1,15 @@
-export default function DisplayCount({count, variant}) {
+export default function DisplayCount({count, variant, excludeSpaces}) {
 
     let display;
     let bgImg;
 
     if (variant==="text") {
         display = "Text Characters"
+        bgImg = "text-count"
+    }
+
+    if (variant==="text" && excludeSpaces) {
+        display = "Text Characters (no space)"
         bgImg = "text-count"
     }
 
