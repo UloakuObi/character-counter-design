@@ -1,6 +1,6 @@
 import React from "react"
 import LimitReachedPopup from "./LimitReachedPopup";
-import { getReadTime, getCharacterCount } from "../utils";
+import { getReadTime } from "../utils";
 
 export default function TextArea({text, setText, excludeSpaces, setExcludeSpaces, textCount}) {
     // Set state values
