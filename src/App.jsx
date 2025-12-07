@@ -1,6 +1,7 @@
 import React from 'react'
 import TextArea from './components/TextArea'
 import DisplayCountBox from './components/DisplayCountBox'
+import DensityGraph from './components/DensityGraph';
 import { getLetterFreq, 
         getWordCount, 
         getSentenceCount, 
@@ -40,6 +41,9 @@ export default function App() {
         sentenceCount={sentenceCount}
         excludeSpaces={excludeSpaces}
       />
+      <br/>
+      <br/>
+      <DensityGraph text={text}/>
     </>
     )
 }

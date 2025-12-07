@@ -149,6 +149,46 @@ div.sentence-count::before {
     transform: scaleX(-1);
 }
 
+/* Density Bar */
+div.density-bar {
+    width: 100%;
+}
+
+.letter {
+    /* width: 3%; */
+    min-width: 20px;
+    max-width: 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.count {
+    /* width: 10%; */
+    /* width: 25%; */
+    /* max-width: 25%; */
+    width: 110px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    text-align: right;
+    /* border: 1px solid red; */
+}
+
+progress {
+    width: 98%;
+    height: 40%;
+    --progress-track: hsl(var(--clr-neutral-700));
+    --progress-fill: hsl(var(--clr-blue-500));
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--progress-track);
+    border-radius: 50px;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--progress-fill);
+    border-radius: 50px;
+}
+
 
 
 
