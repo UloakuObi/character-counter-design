@@ -4,6 +4,7 @@
 /* TextArea Component */
 textarea {
     height: 200px;
+    min-width: 100%;
     resize: none;
     background-color: hsl(var(--clr-neutral-800));
     border: 1px solid hsl(var(--clr-neutral-600));
@@ -83,6 +84,18 @@ input.limitbox {
     display: inline-block;
 }
 
+/* Title */
+h1 span {
+    display: block;
+}
+
+/* Display Count */
+div.display-count {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
 
 /* Display Count Box */
 div.display-count-box {
@@ -110,6 +123,8 @@ div.word-count,
 div.sentence-count {
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
 }
 
 div.text-count {
@@ -155,16 +170,12 @@ div.density-bar {
 }
 
 .letter {
-    /* width: 3%; */
     min-width: 20px;
     max-width: 20px;
     flex-grow: 0;
     flex-shrink: 0;
 }
 .count {
-    /* width: 10%; */
-    /* width: 25%; */
-    /* max-width: 25%; */
     width: 110px;
     flex-grow: 0;
     flex-shrink: 0;

@@ -11,8 +11,10 @@ export default function DensityGraph({text}) {
                     percentage={letterObj.percentage}/>
     ))
     return (
-        <>
-            {letterDensityGraphEl}
-        </>
+        <div className="mt-10 mb-10">
+            <h3 className="fs-2 fw-bold mb-4">Letter Density</h3>
+            {letterDensity.length > 0 ? letterDensityGraphEl 
+            : <p className="fs-4">No characters found. Start typing to see letter density.</p>}
+        </div>
     )
 }

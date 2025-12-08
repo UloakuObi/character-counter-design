@@ -2,6 +2,8 @@ import React from 'react'
 import TextArea from './components/TextArea'
 import DisplayCountBox from './components/DisplayCountBox'
 import DensityGraph from './components/DensityGraph';
+import Title from './components/Title';
+import Logo from './components/Logo';
 import { getLetterFreq, 
         getWordCount, 
         getSentenceCount, 
@@ -25,8 +27,9 @@ export default function App() {
   // console.log(letterDensity)
 
   return (
-    <>
-      <h1>This is the main App!</h1>
+    <main className='flow'>
+      <Logo/>
+      <Title/>
       <TextArea 
         text={text} 
         setText={setText}
@@ -41,32 +44,7 @@ export default function App() {
         sentenceCount={sentenceCount}
         excludeSpaces={excludeSpaces}
       />
-      <br/>
-      <br/>
       <DensityGraph text={text}/>
-    </>
+    </main>
     )
 }
-
-
-
-// Analyze your text in real-time.
-
-// Start typing here… (or paste your text)
-
-// Exclude Spaces
-// Set Character Limit
-
-// Approx. reading time: <!-- Insert number --> minutes
-
-// <!-- Insert number -->
-// Total Characters
-
-// <!-- Insert number -->
-// Word Count
-
-// <!-- Insert number -->
-// Sentence Count
-
-// Letter Density
-// No characters found. Start typing to see letter density.

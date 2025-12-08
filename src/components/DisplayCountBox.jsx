@@ -5,7 +5,7 @@ export default function DisplayCountBox({ textCount, wordCount, sentenceCount, e
     // const {textCount, wordCount, sentenceCount} = React.useContext(CountContext)
 
     return (
-        <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+        <div className="flex flex-col mt-10 md:flex-row gap-4 md:gap-6">
             {excludeSpaces ? 
                 <DisplayCount variant="text" count={textCount} excludeSpaces={excludeSpaces}/> 
                 : <DisplayCount variant="text" count={textCount}/>}

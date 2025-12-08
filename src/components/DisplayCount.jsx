@@ -23,10 +23,16 @@ export default function DisplayCount({count, variant, excludeSpaces}) {
         bgImg = "sentence-count"
     }
 
+    function formatCount(n) {
+        return String(n).padStart(2, "0");
+      }
+
     return (
         <div className={`${bgImg} display-count-box rounded-lg`}>
-            <h2>{count}</h2>
-            <p>{display}</p>
+            <div className="display-count">
+                <h2 className=" fs-1 font-bold leading-none">{formatCount(count)}</h2>
+                <p className="font-normal">{display}</p>
+            </div>
         </div>
     )
 }

@@ -38,11 +38,6 @@
     margin: 0;
 }
 
-body {
-    /* 3. Add accessible line-height */
-    line-height: 1.5;
-}
-
 /* 4. Improve media defaults */
 img, picture, video, canvas, svg {
     display: block;
@@ -55,9 +50,9 @@ input, button, textarea, select {
 }
 
 /* 6. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+/* p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
-}
+} */
 
 /* 7. Improve line wrapping */
 p {
@@ -74,9 +69,10 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     background-color: hsl(var(--clr-neutral-900));
-    color: hsl(var(--clr-neutral-0));
+    color: hsl(var(--clr-neutral-200));
     font-family: "DM Sans", sans-serif;
     font-size: var(--fs-4);
+    font-weight: 200;
 }
 
 #root {
@@ -105,10 +101,20 @@ body {
 
 /* Utilities */
 
-.fs-1 { font-size: var(--fs-1); }
-.fs-m-1 { font-size: var(--fs-mobile-1); }
+.fs-1 { font-size: var(--fs-mobile-1); }
 .fs-2 { font-size: var(--fs-2); }
 .fs-3 { font-size: var(--fs-3); }
 .fs-4 { font-size: var(--fs-4); }
 
+@media (min-width: 768px) {
+    .fs-1 { font-size: var(--fs-1); }
+}
+
+.fw-bold {font-weight: 500;}
+
 .red-highlight {color: hsl(var(--clr-orange-500));}
+
+.flow > *:where(:not(:first-child)) {
+    /* margin-top: var(--flow-space, 16px); */
+    border: 1px solid red;
+}
