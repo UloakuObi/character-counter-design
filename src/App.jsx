@@ -3,7 +3,7 @@ import TextArea from './components/TextArea'
 import DisplayCountBox from './components/DisplayCountBox'
 import DensityGraph from './components/DensityGraph';
 import Title from './components/Title';
-import Logo from './components/Logo';
+import LogoBar from './components/LogoBar';
 import { getLetterFreq, 
         getWordCount, 
         getSentenceCount, 
@@ -28,7 +28,7 @@ export default function App() {
 
   return (
     <main className='flow'>
-      <Logo/>
+      <LogoBar/>
       <Title/>
       <TextArea 
         text={text} 

@@ -25,6 +25,24 @@
     --fs-4: 1rem;
 }
 
+[data-theme="light"] {
+    --bg-color: hsl(var(--clr-neutral-0));
+    --text-color: hsl(var(--clr-neutral-900));
+
+    --textarea-bg-color: hsl(var(--clr-neutral-100));
+    --textarea-border: 1px solid hsl(var(--clr-neutral-700));
+    --textarea-color: hsl(var(--clr-neutral-700));
+}
+
+[data-theme="dark"] {
+    --bg-color: hsl(var(--clr-neutral-900));
+    --text-color: hsl(var(--clr-neutral-200));
+
+    --textarea-bg-color: hsl(var(--clr-neutral-800));
+    --textarea-border: 1px solid hsl(var(--clr-neutral-600));
+    --textarea-color: hsl(var(--clr-neutral-200));
+}
+
 /* -------------- */
 /* General Resets */
 /* -------------- */
@@ -66,13 +84,13 @@ h1, h2, h3, h4, h5, h6 {
 /* ------------------ */
 /* -- Base Styling -- */
 /* ------------------ */
-
 body {
-    background-color: hsl(var(--clr-neutral-900));
-    color: hsl(var(--clr-neutral-200));
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: "DM Sans", sans-serif;
     font-size: var(--fs-4);
     font-weight: 200;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #root {
@@ -114,7 +132,8 @@ body {
 
 .red-highlight {color: hsl(var(--clr-orange-500));}
 
-.flow > *:where(:not(:first-child)) {
-    /* margin-top: var(--flow-space, 16px); */
+/* .flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 16px);
     border: 1px solid red;
-}
+} */
+

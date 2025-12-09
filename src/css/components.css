@@ -6,15 +6,19 @@ textarea {
     height: 200px;
     min-width: 100%;
     resize: none;
-    background-color: hsl(var(--clr-neutral-800));
-    border: 1px solid hsl(var(--clr-neutral-600));
-    color: hsl(var(--clr-neutral-200));
+    background-color: var(--textarea-bg-color);
+    border: 1px solid var(--textarea-border);
+    color: var(--textarea-color);
     border-radius: 15px;
     padding: 16px;
 }
 
+   /* --textarea-bg-color: hsl(var(--clr-neutral-800));
+    --textarea-border: 1px solid hsl(var(--clr-neutral-600));
+    --textarea-color: hsl(var(--clr-neutral-200)); */
+
 textarea::placeholder {
-    color: hsl(var(--clr-neutral-200));
+    color: var(--textarea-color);
 }
 
 textarea:focus,
@@ -45,7 +49,7 @@ label.checkbox .custom {
     border-radius: 4px;
     display: inline-block;
     position: relative;
-    background-color: hsl(var(--clr-neutral-800));
+    background-color: var(--textarea-bg-color);
     transition: background 0.2s, border-color 0.2s;
 }
 
@@ -79,7 +83,7 @@ input.limitbox {
     height: 1.8rem;
     border-radius: 6px;
     border: 1px solid hsl(var(--clr-neutral-600));
-    background-color: hsl(var(--clr-neutral-800));
+    background-color: var(--textarea-bg-color);
     text-align: center;
     display: inline-block;
 }
@@ -201,6 +205,18 @@ progress::-webkit-progress-value {
 }
 
 
+/* Theme Switcher Button */
+button{
+    background-color: var(--textarea-bg-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    display: flex;
+}
 
-
+button img {
+    width: 22px;
+    height: 22px;
+    margin: auto;
+}
 
