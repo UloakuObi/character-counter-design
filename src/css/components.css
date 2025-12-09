@@ -88,6 +88,21 @@ input.limitbox {
     display: inline-block;
 }
 
+/* Theme Switcher Button */
+button.switcher {
+    background-color: var(--textarea-bg-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    display: flex;
+}
+
+button.switcher img {
+    width: 22px;
+    height: 22px;
+    margin: auto;
+}
+
 /* Title */
 h1 span {
     display: block;
@@ -189,9 +204,7 @@ div.density-bar {
 
 progress {
     width: 98%;
-    height: 40%;
-    --progress-track: hsl(var(--clr-neutral-700));
-    --progress-fill: hsl(var(--clr-blue-500));
+    height: 11px;
 }
 
 progress::-webkit-progress-bar {
@@ -205,18 +218,5 @@ progress::-webkit-progress-value {
 }
 
 
-/* Theme Switcher Button */
-button{
-    background-color: var(--textarea-bg-color);
-    width: 44px;
-    height: 44px;
-    border-radius: 6px;
-    display: flex;
-}
 
-button img {
-    width: 22px;
-    height: 22px;
-    margin: auto;
-}
 

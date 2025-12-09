@@ -32,6 +32,9 @@
     --textarea-bg-color: hsl(var(--clr-neutral-100));
     --textarea-border: 1px solid hsl(var(--clr-neutral-700));
     --textarea-color: hsl(var(--clr-neutral-700));
+
+    --progress-track: hsl(var(--clr-neutral-200));
+    --progress-fill: hsl(var(--clr-blue-400));
 }
 
 [data-theme="dark"] {
@@ -41,6 +44,9 @@
     --textarea-bg-color: hsl(var(--clr-neutral-800));
     --textarea-border: 1px solid hsl(var(--clr-neutral-600));
     --textarea-color: hsl(var(--clr-neutral-200));
+
+    --progress-track: hsl(var(--clr-neutral-700));
+    --progress-fill: hsl(var(--clr-blue-500));
 }
 
 /* -------------- */
