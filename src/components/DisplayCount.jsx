@@ -28,7 +28,7 @@ export default function DisplayCount({count, variant, excludeSpaces}) {
       }
 
     return (
-        <div className={`${bgImg} display-count-box rounded-lg`}>
+        <div className={`${bgImg} display-count-box rounded-2xl`}>
             <div className="display-count">
                 <h2 className=" fs-1 font-bold leading-none">{formatCount(count)}</h2>
                 <p className="font-normal">{display}</p>

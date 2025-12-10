@@ -188,7 +188,7 @@ div.sentence-count::before {
     position: absolute;
     z-index: -1;
     inset: 0;
-    border-radius: 8px;
+    border-radius: 16px;
     background-size: contain;
     background-repeat: no-repeat;
     transform: scaleX(-1);
