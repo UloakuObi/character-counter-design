@@ -23,7 +23,11 @@ textarea::placeholder {
 
 textarea:focus,
 textarea:active {
-    border-color: hsl(var(--clr-neutral-700));
+    outline: 2px solid hsl(var(--clr-blue-500));
+}
+
+textarea.red-outline {
+    outline: 2px solid var(--red-highlight);
 }
 
 /* Exclude Spaces & Set Character Limit */
@@ -38,7 +42,12 @@ label.checkbox {
 input.checkbox {
     position: absolute;
     opacity: 0;
-    pointer-events: none;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
 }
 
 /* Create a custom checkbox */
@@ -76,6 +85,11 @@ label.checkbox input:checked + .custom {
   
 label.checkbox input:checked + .custom::after {
     opacity: 1;
+}
+
+label.checkbox input.checkbox:focus + .custom {
+    outline: 2px solid hsl(var(--clr-blue-500));
+    outline-offset: 2px;
 }
 
 input.limitbox {

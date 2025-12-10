@@ -30,6 +30,7 @@ export default function TextArea({text, setText, excludeSpaces, setExcludeSpaces
             <textarea 
                     id="text" 
                     name="text" 
+                    className={limitReached ? "red-outline" : undefined}
                     onChange={e => setText(e.target.value)}
                     placeholder="Start typing here… (or paste your text)"
                     maxLength={limitValue}></textarea>

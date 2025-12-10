@@ -23,6 +23,7 @@
     --fs-2: 1.5rem;
     --fs-3: 1.25rem;
     --fs-4: 1rem;
+
 }
 
 [data-theme="light"] {
@@ -35,6 +36,10 @@
 
     --progress-track: hsl(var(--clr-neutral-200));
     --progress-fill: hsl(var(--clr-blue-400));
+
+    --bg-image: url("/assets/images/bg-light-theme.png");
+
+    --red-highlight: hsl(var(--clr-orange-800));
 }
 
 [data-theme="dark"] {
@@ -47,6 +52,10 @@
 
     --progress-track: hsl(var(--clr-neutral-700));
     --progress-fill: hsl(var(--clr-blue-500));
+
+    --bg-image: url("/assets/images/bg-dark-theme.png");
+
+    --red-highlight: hsl(var(--clr-orange-500));
 }
 
 /* -------------- */
@@ -108,6 +117,8 @@ body {
 
 #root > * {
     grid-column: 2;
+    background-image: var(--bg-image);
+    background-size: 100%;
 }
 
 
@@ -136,7 +147,7 @@ body {
 
 .fw-bold {font-weight: 500;}
 
-.red-highlight {color: hsl(var(--clr-orange-500));}
+.red-highlight {color: var(--red-highlight);}
 
 /* .flow > *:where(:not(:first-child)) {
     margin-top: var(--flow-space, 16px);
