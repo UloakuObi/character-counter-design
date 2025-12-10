@@ -222,6 +222,7 @@ progress {
 /* Chrome/Edge */
 progress::-webkit-progress-bar {
     background-color: var(--progress-track);
+    border-radius: 50px;
 }
 
 progress::-webkit-progress-value {
