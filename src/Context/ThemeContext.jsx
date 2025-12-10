@@ -4,7 +4,7 @@ const ThemeContext = React.createContext()
 
 export default function ThemeProvider({children}) {
     const [theme, setTheme] = React.useState(() => (
-        localStorage.getItem("theme") || "light" // Get set theme or default to "light"
+        localStorage.getItem("theme") || "dark" // Get set theme or default to "light"
     ))
 
     React.useEffect(() => {
