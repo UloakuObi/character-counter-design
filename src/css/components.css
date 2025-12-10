@@ -137,14 +137,14 @@ div.display-count-box {
 @media (min-width:48rem) {
     div.display-count-box {
         width: clamp(245px, 33%, 325px);
-        height: 130px;
+        height: 150px;
     }
 }
 
 @media (min-width:64rem) {
     div.display-count-box {
         width: min(33%, 320px);
-        height: 130px;
+        height: 150px;
     }
 }
 
@@ -158,7 +158,7 @@ div.sentence-count {
 }
 
 div.text-count {
-    background-color: hsl(var(--clr-blue-500));
+    background-color: hsl(var(--clr-blue-400));
 }
 
 div.word-count {
@@ -166,7 +166,7 @@ div.word-count {
 }
 
 div.sentence-count {
-    background-color: hsl(var(--clr-orange-800));
+    background-color: hsl(var(--clr-orange-500));
 }
 
 div.text-count::before {
