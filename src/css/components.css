@@ -13,9 +13,6 @@ textarea {
     padding: 16px;
 }
 
-   /* --textarea-bg-color: hsl(var(--clr-neutral-800));
-    --textarea-border: 1px solid hsl(var(--clr-neutral-600));
-    --textarea-color: hsl(var(--clr-neutral-200)); */
 
 textarea::placeholder {
     color: var(--textarea-color);
@@ -213,7 +210,6 @@ div.density-bar {
     flex-grow: 0;
     flex-shrink: 0;
     text-align: right;
-    /* border: 1px solid red; */
 }
 
 progress {

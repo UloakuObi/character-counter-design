@@ -82,10 +82,6 @@ input, button, textarea, select {
     font: inherit;
 }
 
-/* 6. Avoid text overflows */
-/* p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-} */
 
 /* 7. Improve line wrapping */
 p {
@@ -149,8 +145,4 @@ body {
 
 .red-highlight {color: var(--red-highlight);}
 
-/* .flow > *:where(:not(:first-child)) {
-    margin-top: var(--flow-space, 16px);
-    border: 1px solid red;
-} */
 
