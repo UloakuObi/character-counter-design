@@ -219,16 +219,20 @@ progress {
     overflow: hidden;
 }
 
+/* Chrome/Edge */
 progress::-webkit-progress-bar {
     background-color: var(--progress-track);
 }
 
 progress::-webkit-progress-value {
     background-color: var(--progress-fill);
+    border-radius: 50px;
 }
 
+/* Firefox */
 progress::-moz-progress-bar {
     background-color: var(--progress-fill);
+    border-radius: 50px;
 }
 
 
