@@ -4,10 +4,9 @@ import DisplayCountBox from './components/DisplayCountBox'
 import DensityGraph from './components/DensityGraph';
 import Title from './components/Title';
 import LogoBar from './components/LogoBar';
-import { getLetterFreq, 
-        getWordCount, 
-        getSentenceCount, 
-        getCharacterCount } from "./utils";
+import { getWordCount, 
+         getSentenceCount, 
+         getCharacterCount } from "./utils";
 
 export default function App() {
   // State Values
