@@ -10,11 +10,6 @@ export default function TextArea({text, setText, excludeSpaces, setExcludeSpaces
     const readingTime = getReadTime(text)   
 
     const limitReached = (Number(limitValue) != 0) && (Number(textCount) + 1 > Number(limitValue))
-    // console.log(Number(textCount))
-    // console.log(Number(limitValue))
-    // console.log(limitReached)
-
-    //console.log(`Text Count: ${textCount}`)
 
     function clearLimitValue() {
         if (!hasLimit) {

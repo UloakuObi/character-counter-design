@@ -226,7 +226,8 @@ progress::-webkit-progress-bar {
     border-radius: 50px;
 }
 
-progress::-webkit-progress-value {
+progress::-webkit-progress-value,
+progress::-moz-progress-bar {
     background-color: var(--progress-fill);
     border-radius: 50px;
 }

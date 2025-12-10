@@ -17,14 +17,9 @@ export default function App() {
   const textCount = getCharacterCount(text, excludeSpaces)
   // Count words
   const wordCount = getWordCount(text)
-  //console.log(`Word Count: ${wordCount}`)
 
   // Count sentences
   const sentenceCount = getSentenceCount(text)
-  //console.log(`Sentence Count: ${sentenceCount}`)
-
-  const letterDensity = getLetterFreq(text)
-  // console.log(letterDensity)
 
   return (
     <main className='flow'>
