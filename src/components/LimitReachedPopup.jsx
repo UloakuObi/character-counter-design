@@ -1,6 +1,6 @@
 import infoIcon from "/assets/images/icon-info.svg"
 
-export default function({ limitValue }) {
+export default function LimitReachedPopup({ limitValue }) {
     return (
         <div className="flex content-center gap-2 mt-3">
             <img src={infoIcon} alt=""/>
