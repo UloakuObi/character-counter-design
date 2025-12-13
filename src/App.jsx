@@ -21,7 +21,7 @@ export default function App() {
   const sentenceCount = getSentenceCount(text)
 
   return (
-    <main className='flow'>
+    <main>
       <LogoBar/>
       <Title/>
       <TextArea 

@@ -44,10 +44,11 @@ export function getWordCount(text) {
 
 // Count Sentences
 export function getSentenceCount(text) {
-    const re = /[\.?]/g
+    const re = /[\.?!]/g
 
-    const cleanText = text.replaceAll(/[\s!]+/g, " ")
-    const splitText = cleanText.trim().split(re)
+    // const cleanText = text.replaceAll(/[\s!]+/g, " ")
+    // const splitText = cleanText.trim().split(re)
+    const splitText = text.trim().split(re)
     const finalText = splitText.filter(word => (word != ""))
     return finalText.length
 }

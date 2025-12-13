@@ -101,7 +101,7 @@ body {
     font-family: "DM Sans", sans-serif;
     font-size: var(--fs-4);
     font-weight: 200;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    /* transition: background-color 0.3s ease, color 0.3s ease; */
 }
 
 #root {
